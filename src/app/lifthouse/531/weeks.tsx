@@ -1,4 +1,12 @@
-import { Button, Collapse, CollapseProps, Modal, notification } from "antd";
+import {
+  Button,
+  Collapse,
+  CollapseProps,
+  Divider,
+  Modal,
+  notification,
+  Space,
+} from "antd";
 import CompleteFiveThreeOneModal from "./components/complete531";
 import { useEffect, useState } from "react";
 import { useFiveThreeOneContext } from "./context";
@@ -53,7 +61,33 @@ export default function FiveThreeOneWeeks() {
     ),
     collapsible: index + 1 !== week ? "disabled" : undefined,
   }));
-  return <Collapse activeKey={week} className="mt-4 w-full" items={items} />;
+  return (
+    <div>
+      <Collapse
+        activeKey={week}
+        className="mt-4 w-full lg:hidden"
+        items={items}
+      />
+      <div className="hidden lg:grid lg:grid-cols-4 gap-12 mt-6">
+        {items.map((item) => (
+          <Space
+            direction="vertical"
+            key={item.key}
+            className={`
+              ${
+                item.collapsible === "disabled"
+                  ? "bg-grey-500 opacity-25 pointer-events-none"
+                  : ""
+              } bg-white rounded-lg p-6`}
+          >
+            <div>{item.label}</div>
+            <Divider className="mt-1" />
+            <div>{item.children}</div>
+          </Space>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 type ExerciseRowProps = {

@@ -75,8 +75,8 @@ export default function FiveThreeOne() {
             skip to any in order for this program to be effective. We take{" "}
             <span className="font-bold">90% </span>
             of your total personal best and use that as the base for the
-            program.
-            <div className="font-bold">
+            program.{" "}
+            <span className="font-bold">
               You can reset the your progress{" "}
               <span
                 onClick={resetWeeks}
@@ -84,7 +84,7 @@ export default function FiveThreeOne() {
               >
                 here
               </span>
-            </div>
+            </span>
           </div>
         }
       />
