@@ -58,7 +58,7 @@ export default function LandingPage({ quote, author }: Props) {
             <h1 className="text-5xl font-bold">LiftHouse 🏋</h1>
             <Divider />
             <p className="text-xl text-gray-500 italic">{quote}</p>
-            <p className="text-right text-gray-500 ">- {author}</p>
+            <p className="text-gray-500">- {author}</p>
             <Divider />
             <Space>
               <Button
