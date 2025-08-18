@@ -38,7 +38,7 @@ export default function Exercises() {
 
   return (
     <PageAnimation>
-      <div className="sticky top-0 w-full py-2 mb-4 shadow">
+      <div className="w-full py-2 mb-4 shadow">
         <SearchElement
           filterTagOptions={Object.keys(PrimaryMuscleGroup)}
           placerHolder="Search exercises"
@@ -50,28 +50,30 @@ export default function Exercises() {
         />
       </div>
       {loading && <ExerciseCardSkeleton />}
-      <div className="grid lg:grid-cols-3 gap-4">
-        {exercises
-          ?.filter((o) => o.name.toLocaleLowerCase().includes(searchQuery))
-          .filter((exercise) =>
-            selectedTags.length
-              ? selectedTags.includes(exercise.primaryMuscleGroup)
-              : true
-          )
-          .map((exercise) => {
-            return (
-              <div
-                key={exercise.exerciseId}
-                className="bg-white rounded p-6 cursor-pointer"
-                onClick={() => onClickCard(exercise)}
-              >
-                <p className="text-base font-medium pb-2">{exercise.name}</p>
-                <p className="text-sm leading-6 text-gray-400">
-                  {exercise.primaryMuscleGroup}
-                </p>
-              </div>
-            );
-          })}
+      <div className="h-screen">
+        <div className="h-full overflow-auto grid lg:grid-cols-3 gap-4">
+          {exercises
+            ?.filter((o) => o.name.toLocaleLowerCase().includes(searchQuery))
+            .filter((exercise) =>
+              selectedTags.length
+                ? selectedTags.includes(exercise.primaryMuscleGroup)
+                : true
+            )
+            .map((exercise) => {
+              return (
+                <div
+                  key={exercise.exerciseId}
+                  className="bg-white rounded p-6 cursor-pointer"
+                  onClick={() => onClickCard(exercise)}
+                >
+                  <p className="text-base font-medium pb-2">{exercise.name}</p>
+                  <p className="text-sm leading-6 text-gray-400">
+                    {exercise.primaryMuscleGroup}
+                  </p>
+                </div>
+              );
+            })}
+        </div>
       </div>
       <ExerciseDrawer
         show={showDrawer}
