@@ -17,25 +17,12 @@ async function getQuote() {
 export default async function App() {
   const quote = await getQuote();
   return (
-    <div className="h-full">
+    <div className="relative h-full overflow-hidden">
       <Image className="w-full h-auto md:hidden" src={BannerImage} alt="" />
       <div
         className={`flex h-full bg-no-repeat bg-right bg-fixed items-start md:items-center`}
       >
-        <div className="hidden md:block absolute right-0 w-full h-full">
-          <Image
-            alt="Self Made"
-            src={BackgroundImage}
-            placeholder="blur"
-            fill
-            sizes="50vw"
-            style={{
-              objectFit: "contain",
-              objectPosition: "right bottom",
-            }}
-          />
-        </div>
-        <div className="md:w-1/2 lg:w-3/4">
+        <div className="md:w-1/2 xl:w-1/2">
           <div className="m-12">
             <h1 className="text-5xl font-bold">LiftHouse 🏋</h1>
             <Divider />
@@ -52,6 +39,17 @@ export default async function App() {
             </Space>
             <DemoText />
           </div>
+        </div>
+        <div className="hidden md:flex absolute right-0 ">
+          <Image
+            alt="Self Made"
+            src={BackgroundImage}
+            placeholder="blur"
+            style={{
+              objectFit: "contain",
+              objectPosition: "right bottom",
+            }}
+          />
         </div>
       </div>
     </div>
