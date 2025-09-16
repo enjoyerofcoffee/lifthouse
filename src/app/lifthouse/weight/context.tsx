@@ -9,7 +9,7 @@ import {
   useState,
 } from "react";
 import dayjs from "dayjs";
-import { useFetch } from "@/app/hooks/useFetch";
+import { useFetch } from "../../../../hooks/useFetch";
 import { Weight } from "@/lib/supabase/db/types";
 
 interface WeightCalendar extends Omit<Weight, "date"> {

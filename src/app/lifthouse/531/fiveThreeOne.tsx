@@ -6,7 +6,7 @@ import { PageInfoPortal } from "../components/pageInfo";
 import { Setup } from "./components/setup";
 import Weeks from "./weeks";
 import { useFiveThreeOneContext } from "./context";
-import { useLocalStorage } from "@/app/hooks/useLocalStorage";
+import { useLocalStorage } from "../../../../hooks/useLocalStorage";
 
 export default function FiveThreeOne() {
   const { clearFiveThreeOne } = useLocalStorage();

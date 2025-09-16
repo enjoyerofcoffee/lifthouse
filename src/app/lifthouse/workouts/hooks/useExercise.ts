@@ -1,4 +1,4 @@
-import { useFetch } from "@/app/hooks/useFetch";
+import { useFetch } from "../../../../../hooks/useFetch";
 import { Exercise } from "@/lib/supabase/db/types";
 import { useEffect, useState } from "react";
 

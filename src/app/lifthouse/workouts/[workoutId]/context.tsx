@@ -1,6 +1,6 @@
 "use client";
 
-import { useFetch } from "@/app/hooks/useFetch";
+import { useFetch } from "../../../../../hooks/useFetch";
 import { Exercise, Workout } from "@/lib/supabase/db/types";
 import { useSearchParams } from "next/navigation";
 import {

@@ -1,7 +1,7 @@
 "use client";
 
 import { PageAnimation } from "@/app/aniamtions/pageAnimation";
-import { useFetch } from "@/app/hooks/useFetch";
+import { useFetch } from "../../../../hooks/useFetch";
 import { Exercise, PrimaryMuscleGroup } from "@/lib/supabase/db/types";
 import { Input, Tag } from "antd";
 import { useEffect, useState } from "react";

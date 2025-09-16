@@ -1,8 +1,8 @@
 "use client";
 
 import { useAppContext } from "@/app/context";
-import { useFetch } from "@/app/hooks/useFetch";
-import { useLocalStorage } from "@/app/hooks/useLocalStorage";
+import { useFetch } from "../../../../../hooks/useFetch";
+import { useLocalStorage } from "../../../../../hooks/useLocalStorage";
 import {
   Workout,
   ExerciseConfiguration,

@@ -41,8 +41,7 @@ export default function LandingPage({ quote, author }: Props) {
       : undefined;
 
   return (
-    <LayoutAnimation className="h-full">
-      {isSmallScreen && <Image src={Banner} alt="" className="w-full h-auto" />}
+    <div className="h-full">
       <div
         className={`flex h-full bg-no-repeat bg-right bg-fixed ${
           !isSmallScreen ? "items-center" : "items-start"
@@ -71,6 +70,6 @@ export default function LandingPage({ quote, author }: Props) {
           </div>
         </div>
       </div>
-    </LayoutAnimation>
+    </div>
   );
 }

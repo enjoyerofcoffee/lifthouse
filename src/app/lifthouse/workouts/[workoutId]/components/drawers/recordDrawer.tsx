@@ -12,8 +12,8 @@ import {
 } from "antd";
 import { useWorkoutIdContext } from "../../context";
 import { Complete } from "./complete";
-import { useLocalStorage } from "@/app/hooks/useLocalStorage";
-import { useFetch } from "@/app/hooks/useFetch";
+import { useLocalStorage } from "../../../../../../../hooks/useLocalStorage";
+import { useFetch } from "../../../../../../../hooks/useFetch";
 import { LogEntry } from "@/lib/supabase/db/types";
 import { useRouter } from "next/navigation";
 import getConfig from "@/config";
