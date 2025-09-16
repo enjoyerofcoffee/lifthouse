@@ -1,7 +1,6 @@
 import { Button, Divider, Modal, Typography } from "antd";
 import { useState } from "react";
 import { ExclamationCircleFilled } from "@ant-design/icons";
-import { useRouter } from "next/navigation";
 import { BottomFadeInAnimation } from "@/app/aniamtions/bottomFadeInAnimation";
 import WorkoutFormDrawer, {
   ExerciseFormDrawerField,
@@ -9,6 +8,7 @@ import WorkoutFormDrawer, {
 import { useWorkout } from "../hooks/useWorkout";
 import { Workout } from "@/lib/supabase/db/types";
 import getConfig from "@/config";
+import Link from "next/link";
 
 const { pageUrl } = getConfig();
 const { confirm } = Modal;
@@ -30,7 +30,6 @@ export default function WorkoutCard({
 }: WorkoutCardProps) {
   const [drawOpen, setDrawOpen] = useState<boolean>(false);
   const { updateWorkoutPlan } = useWorkout();
-  const router = useRouter();
 
   const showDeleteConfirm = () => {
     confirm({
@@ -44,10 +43,6 @@ export default function WorkoutCard({
         onDelete(workoutId);
       },
     });
-  };
-
-  const onCardClick = () => {
-    router.push(`${pageUrl}/workouts/${workoutId}?name=${name}`);
   };
 
   const onFinish = async (info: ExerciseFormDrawerField) => {
@@ -74,10 +69,12 @@ export default function WorkoutCard({
         defaultTitleFieldValue={name}
         defaultDescriptionFieldValue={description}
       />
-      <div className="relative p-6 " onClick={onCardClick}>
-        <h1 className="text-base font-medium pb-2">{name}</h1>
-        <Description text={description} />
-      </div>
+      <Link href={`${pageUrl}/workouts/${workoutId}?name=${name}`}>
+        <div className="relative p-6 ">
+          <h1 className="text-base font-medium pb-2">{name}</h1>
+          <Description text={description} />
+        </div>
+      </Link>
       <div className="flex items-center justify-between py-2 bg-gray-50">
         <Button
           className="flex-1 text-gray-400"

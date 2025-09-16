@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button, Divider, Space } from "antd";
 import Image from "next/image";
@@ -8,6 +7,7 @@ import SelfMade from "./assets/selfmade.png";
 import Banner from "./assets/banner.png";
 import { LayoutAnimation } from "./aniamtions/layoutAnimation";
 import { DemoText } from "./components/demo/demo";
+import Link from "next/link";
 
 const COMPACT_SCREEN = 850;
 
@@ -18,7 +18,6 @@ type Props = {
 
 export default function LandingPage({ quote, author }: Props) {
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>();
-  const router = useRouter();
 
   useEffect(() => {
     const handleResize = () => {
@@ -61,15 +60,12 @@ export default function LandingPage({ quote, author }: Props) {
             <p className="text-gray-500">- {author}</p>
             <Divider />
             <Space>
-              <Button
-                type="primary"
-                onClick={() => router.push("/account/login")}
-              >
-                Log in
-              </Button>
-              <Button onClick={() => router.push("/account/signup")}>
-                New here? Sign up!
-              </Button>
+              <Link href={"/account/login"}>
+                <Button type="primary">Log in</Button>
+              </Link>
+              <Link href={"/account/signup"}>
+                <Button>New here? Sign up!</Button>
+              </Link>
             </Space>
             <DemoText />
           </div>

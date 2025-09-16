@@ -14,7 +14,6 @@ import { createSupabaseClient } from "@/lib/supabase/client";
 import { signInWithEmail } from "./actions";
 import { useRouter } from "next/navigation";
 import { DemoText } from "@/app/components/demo/demo";
-import getConfig from "@/config";
 import { redirectToHome } from "@/lib/utils";
 
 enum Provider {
