@@ -2,6 +2,7 @@ import { Layout } from "antd";
 import Header from "./components/header";
 import PageInfo from "./components/pageInfo";
 import SideNav from "./components/sideNav";
+import { LayoutAnimation } from "../aniamtions/layoutAnimation";
 
 export default function LiftHouseLayout({
   children,
@@ -9,7 +10,7 @@ export default function LiftHouseLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-full">
+    <LayoutAnimation>
       <Layout className="h-full">
         <SideNav />
         <Layout className="h-full">
@@ -22,6 +23,6 @@ export default function LiftHouseLayout({
           </Layout>
         </Layout>
       </Layout>
-    </div>
+    </LayoutAnimation>
   );
 }
