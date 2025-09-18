@@ -1,8 +1,7 @@
-import { Layout, Menu } from "antd";
-import SiderNav from "./components/sideNav";
+import { Layout } from "antd";
 import Header from "./components/header";
-import { LayoutAnimation } from "../aniamtions/layoutAnimation";
 import PageInfo from "./components/pageInfo";
+import SideNav from "./components/sideNav";
 
 export default function LiftHouseLayout({
   children,
@@ -10,9 +9,9 @@ export default function LiftHouseLayout({
   children: React.ReactNode;
 }) {
   return (
-    <LayoutAnimation>
+    <div className="h-full">
       <Layout className="h-full">
-        <SiderNav />
+        <SideNav />
         <Layout className="h-full">
           <Header />
           <PageInfo />
@@ -23,6 +22,6 @@ export default function LiftHouseLayout({
           </Layout>
         </Layout>
       </Layout>
-    </LayoutAnimation>
+    </div>
   );
 }

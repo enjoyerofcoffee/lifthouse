@@ -35,7 +35,7 @@ const AppContextProvider = ({ children }: any) => {
     }
   }, []);
 
-  if (user) {
+  if (!user) {
     return (
       <div className="flex flex-col justify-center items-center w-full h-full">
         <Image className="mb-2 w-72 h-20" src={LifthouseLogo} alt="" />
