@@ -71,7 +71,7 @@ export default function WorkoutCard({
       />
       <Link href={`${pageUrl}/workouts/${workoutId}?name=${name}`}>
         <div className="relative p-6 ">
-          <h1 className="text-base font-medium pb-2">{name}</h1>
+          <h1 className="text-black text-base font-medium pb-2">{name}</h1>
           <Description text={description} />
         </div>
       </Link>
