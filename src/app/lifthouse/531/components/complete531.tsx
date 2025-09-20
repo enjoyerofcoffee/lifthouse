@@ -1,4 +1,4 @@
-import { useLocalStorage } from "@/app/hooks/useLocalStorage";
+import { useLocalStorage } from "../../../../../hooks/useLocalStorage";
 import { LogEntry, PersonalBest } from "@/lib/supabase/db/types";
 import { CheckCircleOutlined, WarningOutlined } from "@ant-design/icons";
 import {
@@ -17,7 +17,7 @@ import {
 import { useEffect, useState } from "react";
 import { useFiveThreeOneContext } from "../context";
 import Warmup from "./warmup";
-import { useFetch } from "@/app/hooks/useFetch";
+import { useFetch } from "../../../../../hooks/useFetch";
 import { useFiveThreeOne } from "../useFiveThreeOne";
 import { NotificationDescription, NotificationMessage } from "./notification";
 import { LogVisual } from "../../components/logVisuals/logVisual";

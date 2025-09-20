@@ -15,7 +15,7 @@ import {
   PlusSquareOutlined,
   WarningOutlined,
 } from "@ant-design/icons";
-import { useLocalStorage } from "@/app/hooks/useLocalStorage";
+import { useLocalStorage } from "../../../../hooks/useLocalStorage";
 
 const { TextArea } = Input;
 

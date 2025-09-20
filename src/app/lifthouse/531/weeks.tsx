@@ -12,8 +12,8 @@ import { useEffect, useState } from "react";
 import { useFiveThreeOneContext } from "./context";
 import { LogEntry, PersonalBest } from "@/lib/supabase/db/types";
 import { CheckCircleTwoTone } from "@ant-design/icons";
-import { useFetch } from "@/app/hooks/useFetch";
-import { useLocalStorage } from "@/app/hooks/useLocalStorage";
+import { useFetch } from "../../../../hooks/useFetch";
+import { useLocalStorage } from "../../../../hooks/useLocalStorage";
 import { useFiveThreeOne } from "./useFiveThreeOne";
 import {
   NotificationDescription,

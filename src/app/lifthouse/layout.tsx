@@ -1,8 +1,8 @@
-import { Layout, Menu } from "antd";
-import SiderNav from "./components/sideNav";
+import { Layout } from "antd";
 import Header from "./components/header";
-import { LayoutAnimation } from "../aniamtions/layoutAnimation";
 import PageInfo from "./components/pageInfo";
+import SideNav from "./components/sideNav";
+import { LayoutAnimation } from "../aniamtions/layoutAnimation";
 
 export default function LiftHouseLayout({
   children,
@@ -12,7 +12,7 @@ export default function LiftHouseLayout({
   return (
     <LayoutAnimation>
       <Layout className="h-full">
-        <SiderNav />
+        <SideNav />
         <Layout className="h-full">
           <Header />
           <PageInfo />

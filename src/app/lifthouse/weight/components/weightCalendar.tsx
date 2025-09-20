@@ -6,7 +6,7 @@ import { useWeightInContext } from "../context";
 import type { Dayjs } from "dayjs";
 import { CellRenderInfo } from "rc-picker/lib/interface";
 import { useState } from "react";
-import { useFetch } from "@/app/hooks/useFetch";
+import { useFetch } from "../../../../../hooks/useFetch";
 import { Weight } from "@/lib/supabase/db/types";
 import WeightCalendarSkeleton from "./weightCalendar.skeleton";
 

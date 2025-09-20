@@ -6,7 +6,7 @@ import LifthouseLogo from "@/app/assets/lifthouse_logo_black.png";
 import { usePathname, useRouter } from "next/navigation";
 import { pageConfig } from "./constants";
 import { useEffect, useState } from "react";
-import { useLocalStorage } from "@/app/hooks/useLocalStorage";
+import { useLocalStorage } from "../../../../hooks/useLocalStorage";
 import { redirectToHome } from "@/lib/utils";
 
 const { Sider } = Layout;

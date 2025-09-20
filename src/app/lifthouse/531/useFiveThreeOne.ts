@@ -1,4 +1,4 @@
-import { useFetch } from "@/app/hooks/useFetch";
+import { useFetch } from "../../../../hooks/useFetch";
 import { FiveThreeOne } from "@/lib/supabase/db/types";
 import { useFiveThreeOneContext } from "./context";
 

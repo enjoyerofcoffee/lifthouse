@@ -3,6 +3,7 @@ import ExerciseCoverImage from "@/app/lifthouse/components/assets/exercises_cove
 import MealsCoverImage from "@/app/lifthouse/components/assets/meals_cover.png";
 import WeightCoverImage from "@/app/lifthouse/components/assets/weight_cover.png";
 import WorkoutsCoverImage from "@/app/lifthouse/components/assets/workouts_cover.png";
+import { StaticImageData } from "next/image";
 
 const MainRoute = "/lifthouse";
 
@@ -44,3 +45,11 @@ export const pageConfig = [
     cover: WeightCoverImage,
   },
 ];
+
+export type PageConfig = {
+  title: string;
+  icon: string;
+  route: string;
+  description: string;
+  cover: StaticImageData;
+};

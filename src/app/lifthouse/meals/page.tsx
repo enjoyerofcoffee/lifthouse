@@ -1,6 +1,6 @@
 "use client";
 
-import { useFetch } from "@/app/hooks/useFetch";
+import { useFetch } from "../../../../hooks/useFetch";
 import { Meal } from "@/lib/supabase/db/types";
 import { Skeleton, TabsProps, Tabs } from "antd";
 import dayjs from "dayjs";

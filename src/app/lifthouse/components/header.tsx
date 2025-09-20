@@ -6,7 +6,7 @@ import { useAppContext } from "@/app/context";
 import { UnlockOutlined, LogoutOutlined } from "@ant-design/icons";
 import { useRouter } from "next/navigation";
 import { createSupabaseClient } from "@/lib/supabase/client";
-import { useLocalStorage } from "@/app/hooks/useLocalStorage";
+import { useLocalStorage } from "../../../../hooks/useLocalStorage";
 import getConfig from "@/config";
 
 const { Header: AntDHeader } = Layout;

@@ -1,5 +1,5 @@
-import { useFetch } from "@/app/hooks/useFetch";
-import { useLocalStorage } from "@/app/hooks/useLocalStorage";
+import { useFetch } from "../../../../../hooks/useFetch";
+import { useLocalStorage } from "../../../../../hooks/useLocalStorage";
 import { Exercise, LogEntry } from "@/lib/supabase/db/types";
 import { Button, Modal, notification } from "antd";
 import { Dispatch, SetStateAction, useState } from "react";

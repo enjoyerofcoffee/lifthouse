@@ -1,6 +1,8 @@
-import { useFetch } from "@/app/hooks/useFetch";
-import { useLocalStorage } from "@/app/hooks/useLocalStorage";
-import { Exercise, FiveThreeOne } from "@/lib/supabase/db/types";
+"use client";
+
+import { useFetch } from "../../../../hooks/useFetch";
+import { useLocalStorage } from "../../../../hooks/useLocalStorage";
+import { FiveThreeOne } from "@/lib/supabase/db/types";
 import { createContext, useContext, useEffect, useState } from "react";
 import FiveThreeOneSkeleton from "./fiveThreeOne.skeleton";
 

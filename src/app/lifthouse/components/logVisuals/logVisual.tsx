@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { View } from "./types";
-import { useLocalStorage } from "@/app/hooks/useLocalStorage";
+import { useLocalStorage } from "../../../../../hooks/useLocalStorage";
 import { Button, DatePicker, Divider, Space } from "antd";
 import dayjs from "dayjs";
-import { useFetch } from "@/app/hooks/useFetch";
+import { useFetch } from "../../../../../hooks/useFetch";
 import { Exercise, LogEntry } from "@/lib/supabase/db/types";
 import dynamic from "next/dynamic";
 import ChartsSkeleton from "./charts.skeleton";
