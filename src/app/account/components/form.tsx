@@ -1,3 +1,5 @@
+"use client";
+
 import { Button, ButtonProps, Form, Input, Typography, FormProps } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 
